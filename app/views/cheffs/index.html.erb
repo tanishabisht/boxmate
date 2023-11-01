@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cheffs</h1>
+
+<div id="cheffs">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Time</th>
+          <th scope="col">Cuisine</th>
+          <th scope="col">Meal</th>
+          <th scope="col">Price</th>
+          <th scope="col">Max Number</th>
+          <th scope="col">Booked Number</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <% @cheffs.each do |cheff| %>
+          <%= render cheff %>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+
+<%= link_to "Create New Schedule", new_cheff_path, class: "btn btn-success" %>

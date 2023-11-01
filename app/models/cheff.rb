@@ -1,0 +1,2 @@
+class Cheff < ApplicationRecord
+end

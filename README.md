@@ -15,4 +15,8 @@
 
 # Autogranerate code
 - rails g controller login index
-- rails g scaffold cheff day:string time:string cuisine:string meal:string price:number booked_num:number max_num:number
+- STEP 1: rails g scaffold cheff day:string time:string cuisine:string meal:string price:float booked_num:integer max_num:integer
+- STEP 2: rails db:migrate
+
+# push the created migrations
+- rails db:migrate

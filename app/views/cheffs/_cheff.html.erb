@@ -1,0 +1,16 @@
+<tr id="<%= dom_id cheff %>">
+  <td><%= cheff.day %></th>
+  <td><%= cheff.time %></td>
+  <td><%= cheff.cuisine %></td>
+  <td><%= cheff.meal %></td>
+  <td><%= cheff.price %></td>
+  <td><%= cheff.booked_num %></td>
+  <td><%= cheff.max_num %></td>
+  <%
+=begin%>
+ <td><%= link_to "Show", cheff, class: "btn btn-secondary" %></td> 
+<%
+=end%>
+  <td><%= link_to "Edit", edit_cheff_path(cheff), class: "btn btn-secondary" %></td>
+  <td><%= button_to "Delete", cheff, method: :delete, class: "btn btn-danger" %></td>
+</tr>

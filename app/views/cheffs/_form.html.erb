@@ -1,0 +1,32 @@
+<%= form_with(model: cheff) do |form| %>
+  <% if cheff.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cheff.errors.count, "error") %> prohibited this cheff from being saved:</h2>
+
+      <ul>
+        <% cheff.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= form.text_field :day, class: "form-control mb-3", placeholder: "Day" %>
+  <%= form.text_field :time, class: "form-control mb-3", placeholder: "Time" %>
+  <%= form.text_field :cuisine, class: "form-control mb-3", placeholder: "Cuisine" %>
+  <%= form.text_field :meal, class: "form-control mb-3", placeholder: "Meal" %>
+  <%= form.text_field :price, class: "form-control mb-3", placeholder: "Price" %>
+  <%= form.text_field :booked_num, class: "form-control mb-3", placeholder: "Booked Number" %>
+  <%= form.text_field :max_num, class: "form-control mb-3", placeholder: "Maximum Number" %>
+
+  <%
+=begin%>
+ <%= form.number_field :user_id, id: :friend_user_id, class: "form-control mb-3", value: current_user.id, type: :hidden %> 
+<%
+=end%>
+
+  <%= form.submit class:"btn btn-success" %>
+  <%= link_to "Cancel", cheffs_path, class: "btn btn-secondary" %>
+
+<% end %>
