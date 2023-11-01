@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_01_165312) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_01_182538) do
   create_table "cheffs", force: :cascade do |t|
     t.string "day"
     t.string "time"
@@ -19,6 +19,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_01_165312) do
     t.float "price"
     t.integer "booked_num"
     t.integer "max_num"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string "day"
+    t.string "time"
+    t.string "cuisine"
+    t.string "meal"
+    t.float "price"
+    t.integer "cheff_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

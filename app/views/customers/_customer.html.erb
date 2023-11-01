@@ -1,0 +1,10 @@
+<tr id="<%= dom_id customer %>">
+  <td><%= customer.day %></th>
+  <td><%= customer.time %></td>
+  <td><%= customer.cuisine %></td>
+  <td><%= customer.meal %></td>
+  <td><%= customer.price %></td>
+  <td><%= customer.cheff_id %></td>
+  
+  <td><%= button_to "Delete", customer, method: :delete, class: "btn btn-danger" %></td>
+</tr>

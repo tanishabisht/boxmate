@@ -1,0 +1,36 @@
+<%= form_with(model: customer, url: show_chefs_customers_path, method: :get) do |form| %>
+  <% if customer.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+        <% customer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= form.label :day, 'Day' %>
+  <%= form.select :day, ['Monday', 'Tuesday', 'Wednesday', "Thursday", "Friday", "Saturday", "Sunday"], { include_blank: true }, { class: 'form-control mb-3', placeholder: 'Day' } %>
+  
+  <%= form.label :time, 'Time' %>
+  <%= form.select :time, ['Breakfast', 'Lunch', 'Dinner'], { include_blank: true }, { class: 'form-control mb-3', placeholder: 'Time' } %>
+
+  <%= form.label :cuisine, 'Cuisine' %>
+  <%= form.select :cuisine, ['Chinese', 'Italian', 'Indian', 'Mexican'], { include_blank: true }, { class: 'form-control mb-3', placeholder: 'Cuisine' } %>
+
+  <%
+=begin%>
+ <%= link_to "Filter Chefs", show_chefs_customers_path(day:, time: 'sds', cuisine: 'sdsd'), method: :get, class: "btn btn-primary" %> 
+<%
+=end%>
+
+  <br/>
+  <br/>
+  <br/>
+  <%= form.submit class:"btn btn-success" %>
+  <%= link_to "Cancel", customers_path, class: "btn btn-secondary" %>
+
+<% end %>

@@ -18,5 +18,8 @@
 - STEP 1: rails g scaffold cheff day:string time:string cuisine:string meal:string price:float booked_num:integer max_num:integer
 - STEP 2: rails db:migrate
 
+- STEP 1: rails g scaffold customer day:string time:string cuisine:string meal:string price:float cheff_id:integer
+- STEP 2: rails db:migrate
+
 # push the created migrations
 - rails db:migrate

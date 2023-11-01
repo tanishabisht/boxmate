@@ -1,0 +1,34 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Time</th>
+            <th scope="col">Cuisine</th>
+            <th scope="col">Meal</th>
+            <th scope="col">Price</th>
+            <th scope="col">Select Your Meal</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if filterchef.present? %>
+            <% filterchef.each do |chef| %>
+                <tr>
+                    <td><%= chef.day %></th>
+                    <td><%= chef.time %></td>
+                    <td><%= chef.cuisine %></td>
+                    <td><%= chef.meal %></td>
+                    <td><%= chef.price %></td>
+                    <td><%= button_to "Select", customers_path, method: :post, params: { customer: {day: chef.day, time: chef.time, cuisine: chef.cuisine, meal: chef.meal, price: chef.price, cheff_id: 'cheffid'} }, class: "btn btn-secondary" %></td>
+
+                    <%
+=begin%>
+ <td>
+                        <%= button_to "Select", customers_path(day: chef.day, time: chef.time, cuisine: chef.cuisine, meal: chef.meal, price: chef.price, cheffid: "hardcode"), class: "btn btn-secondary" %>
+                    </td> 
+<%
+=end%>
+                </tr>
+            <% end %>
+        <% end %>
+    </tbody>
+</table>

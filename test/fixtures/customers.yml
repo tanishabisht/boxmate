@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: MyString
+  time: MyString
+  cuisine: MyString
+  meal: MyString
+  price: 1.5
+  cheff_id: 1
+
+two:
+  day: MyString
+  time: MyString
+  cuisine: MyString
+  meal: MyString
+  price: 1.5
+  cheff_id: 1

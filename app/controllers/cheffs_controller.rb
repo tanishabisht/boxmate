@@ -9,7 +9,7 @@ class CheffsController < ApplicationController
   # GET /cheffs/1 or /cheffs/1.json
   def show
   end
-
+  
   # GET /cheffs/new
   def new
     @cheff = Cheff.new
