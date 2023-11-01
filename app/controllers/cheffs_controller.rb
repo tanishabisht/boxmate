@@ -25,7 +25,7 @@ class CheffsController < ApplicationController
 
     respond_to do |format|
       if @cheff.save
-        format.html { redirect_to cheff_url(@cheff), notice: "Cheff was successfully created." }
+        format.html { redirect_to cheffs_path, notice: "Cheff was successfully created." }
         format.json { render :show, status: :created, location: @cheff }
       else
         format.html { render :new, status: :unprocessable_entity }

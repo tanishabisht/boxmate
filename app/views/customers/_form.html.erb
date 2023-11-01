@@ -11,7 +11,6 @@
     </div>
   <% end %>
 
-
   <%= form.label :day, 'Day' %>
   <%= form.select :day, ['Monday', 'Tuesday', 'Wednesday', "Thursday", "Friday", "Saturday", "Sunday"], { include_blank: true }, { class: 'form-control mb-3', placeholder: 'Day' } %>
   
@@ -21,16 +20,7 @@
   <%= form.label :cuisine, 'Cuisine' %>
   <%= form.select :cuisine, ['Chinese', 'Italian', 'Indian', 'Mexican'], { include_blank: true }, { class: 'form-control mb-3', placeholder: 'Cuisine' } %>
 
-  <%
-=begin%>
- <%= link_to "Filter Chefs", show_chefs_customers_path(day:, time: 'sds', cuisine: 'sdsd'), method: :get, class: "btn btn-primary" %> 
-<%
-=end%>
-
-  <br/>
-  <br/>
-  <br/>
-  <%= form.submit class:"btn btn-success" %>
+  <%= form.submit "Find Food", class:"btn btn-success" %>
   <%= link_to "Cancel", customers_path, class: "btn btn-secondary" %>
 
 <% end %>
