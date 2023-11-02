@@ -16,7 +16,6 @@ class CustomersController < ApplicationController
     cuisine = params[:customer][:cuisine]
 
     @filterchef = Cheff.where(day: day, time: time, cuisine: cuisine)
-    puts "Ganpati Pappa Maurya ===== #{@filterchef.to_json} ... #{day} ... #{time} ... #{cuisine}"
     render partial: 'filter', locals: { filterchef: @filterchef, day: params[:day],  time: params[:time], cuisine: params[:cuisine]}
   end
 
